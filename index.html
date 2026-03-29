@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Логистика из Китая</title>
+<title>ФЕНИКС — Логистика из Китая</title>
 
 <style>
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #0a0f1c;
+    background: #05070f;
     color: white;
 }
 
@@ -18,8 +18,8 @@ header {
     height: 100vh;
     background: url('bg.jpg') center/cover no-repeat;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-left: 10%;
     position: relative;
 }
 
@@ -29,42 +29,51 @@ header::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.3));
+    background: radial-gradient(circle at center, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
 }
 
-.hero {
+/* стеклянная карточка */
+.hero-box {
     position: relative;
     z-index: 2;
-    max-width: 600px;
+    text-align: center;
+    padding: 50px 60px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
 
 /* текст */
 h1 {
-    font-size: 72px;
+    font-size: 64px;
     margin: 0;
+    letter-spacing: 2px;
 }
 
 .subtitle {
     margin-top: 20px;
-    font-size: 22px;
-    color: #dbeafe;
+    font-size: 20px;
+    color: #cbd5f5;
 }
 
 /* кнопка */
 .btn {
     margin-top: 30px;
-    padding: 18px 40px;
-    border-radius: 12px;
+    padding: 16px 35px;
+    border-radius: 10px;
     border: none;
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
 
 /* секции */
@@ -75,8 +84,9 @@ section {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .grid {
@@ -86,19 +96,22 @@ h2 {
 }
 
 .card {
-    background: #111827;
+    background: #0f172a;
     padding: 30px;
     border-radius: 16px;
+    text-align: center;
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
+    background: #1e293b;
 }
 
 /* форма */
 .form {
     max-width: 500px;
+    margin: auto;
 }
 
 input, textarea {
@@ -107,6 +120,8 @@ input, textarea {
     margin-top: 10px;
     border-radius: 8px;
     border: none;
+    background: #020617;
+    color: white;
 }
 
 /* телега */
@@ -135,10 +150,14 @@ footer {
 <body>
 
 <header>
-    <div class="hero">
-  
+    <div class="hero-box">
+        <h1>ФЕНИКС</h1>
+        <div class="subtitle">
+            Надёжная доставка товаров из Китая<br>
+            с контролем на каждом этапе
+        </div>
         <button class="btn" onclick="scrollToForm()">
-            Получить расчёт за 15 минут
+            Рассчитать стоимость
         </button>
     </div>
 </header>
@@ -146,8 +165,8 @@ footer {
 <section>
     <h2>Наши услуги</h2>
     <div class="grid">
-        <div class="card">Поиск поставщиков в Китае</div>
-        <div class="card">Выкуп товара напрямую</div>
+        <div class="card">Поиск поставщиков</div>
+        <div class="card">Выкуп товаров</div>
         <div class="card">Проверка качества</div>
         <div class="card">Доставка под ключ</div>
     </div>
@@ -156,10 +175,10 @@ footer {
 <section>
     <h2>Почему выбирают нас</h2>
     <div class="grid">
-        <div class="card">Экономим до 30% на закупке</div>
+        <div class="card">Снижаем закупочную цену</div>
         <div class="card">Контроль на каждом этапе</div>
-        <div class="card">Сроки от 7 дней</div>
-        <div class="card">Официальный договор</div>
+        <div class="card">Быстрая доставка</div>
+        <div class="card">Официальная работа</div>
     </div>
 </section>
 
