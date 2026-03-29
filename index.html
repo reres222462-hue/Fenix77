@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ФЕНИКС — Логистика из Китая</title>
 
+<!-- шрифт -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #05070f;
     color: white;
 }
 
-/* 🔥 HERO */
+/* HERO */
 header {
     height: 100vh;
     background: url('bg.jpg') center/cover no-repeat;
@@ -23,16 +26,15 @@ header {
     position: relative;
 }
 
-/* затемнение */
 header::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+    background: radial-gradient(circle, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
 }
 
-/* стеклянная карточка */
+/* стеклянный блок */
 .hero-box {
     position: relative;
     z-index: 2;
@@ -40,19 +42,34 @@ header::before {
     padding: 50px 60px;
     border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(12px);
 
-    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    box-shadow: 0 0 50px rgba(0,0,0,0.7);
 }
 
-/* текст */
-h1 {
-    font-size: 64px;
+/* мелкий текст */
+.top-info {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* логотип */
+.logo {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 6px;
+
+    background: linear-gradient(90deg, #ffffff, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     margin: 0;
-    letter-spacing: 2px;
 }
 
+/* подзаголовок */
 .subtitle {
     margin-top: 20px;
     font-size: 20px;
@@ -124,7 +141,7 @@ input, textarea {
     color: white;
 }
 
-/* телега */
+/* кнопка телеги */
 .telegram {
     position: fixed;
     bottom: 20px;
@@ -151,11 +168,19 @@ footer {
 
 <header>
     <div class="hero-box">
-        <h1>ФЕНИКС</h1>
+
+        <div class="top-info">
+            Общество с ограниченной ответственностью<br>
+            ИНН 7720938548 | 📞 +7 (916) 169-95-38
+        </div>
+
+        <h1 class="logo">ФЕНИКС</h1>
+
         <div class="subtitle">
             Надёжная доставка товаров из Китая<br>
             с контролем на каждом этапе
         </div>
+
         <button class="btn" onclick="scrollToForm()">
             Рассчитать стоимость
         </button>
@@ -165,8 +190,8 @@ footer {
 <section>
     <h2>Наши услуги</h2>
     <div class="grid">
-        <div class="card">Поиск поставщиков</div>
-        <div class="card">Выкуп товаров</div>
+        <div class="card">Поиск поставщиков в Китае</div>
+        <div class="card">Выкуп товара напрямую</div>
         <div class="card">Проверка качества</div>
         <div class="card">Доставка под ключ</div>
     </div>
@@ -175,10 +200,10 @@ footer {
 <section>
     <h2>Почему выбирают нас</h2>
     <div class="grid">
-        <div class="card">Снижаем закупочную цену</div>
+        <div class="card">Экономим до 30% на закупке</div>
         <div class="card">Контроль на каждом этапе</div>
-        <div class="card">Быстрая доставка</div>
-        <div class="card">Официальная работа</div>
+        <div class="card">Сроки от 7 дней</div>
+        <div class="card">Официальный договор</div>
     </div>
 </section>
 
